@@ -51,7 +51,8 @@ export default function WaitListForm() {
                     <form className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
                         <div>
 
-                            <h3 className="app-text-gray text-center">Join the waitlist</h3>
+                            <h3 className="text-gray-200 text-center">Join the waitlist</h3>
+                            <h3 className="my-2 text-sm text-gray-300 text-center">Get a 40% lifetime discount for being one of the first 1,000 adopters!</h3>
                             <p className="mb-2 text-red-500 font-semibold">{error}</p>
 
                             {/* first name */}
