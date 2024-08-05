@@ -43,12 +43,12 @@ export default function WaitListForm() {
             <div className="flex justify-center">
                 {success ? (<>
                     <div>
-                        <div className="w-[80%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40">
+                        <div className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40">
                             <h3 className="text-center">Thank You for Joining the Waitlist!</h3>
                         </div>
                     </div>
                 </>) : (<>
-                    <form className="w-[80%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
+                    <form className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
                         <div>
 
                             <h3 className="app-text-gray text-center">Join the waitlist</h3>

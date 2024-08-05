@@ -5,7 +5,7 @@ export default function WaitListPage() {
     return (
 
         <>
-            <div className="px-5 md:px-10 lg:px-16 app-bg-black w-full min-h-[100vh] flex justify-center items-center app-text-white">
+            <div className="px-5 md:px-10 py-10 lg:px-16 app-bg-black w-full min-h-[100vh] flex justify-center items-center app-text-white">
                 <div>
                     {/* app name */}
                     <div className="mb-5">
