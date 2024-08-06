@@ -51,8 +51,8 @@ export default function WaitListForm() {
                     <form className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
                         <div>
 
-                            <h3 className="text-gray-200 text-center">Join the waitlist</h3>
-                            <h3 className="my-2 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">40% lifetime discount</b> for being one of <b className="text-yellow-300">the first 1,000 adopters!</b></h3>
+                            <h3 className="text-gray-200 text-center">Special Offer for Early Adopters</h3>
+                            <h3 className="mt-2 mb-5 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">40% lifetime discount</b> for being one of <b className="text-yellow-300">the first 1,000 adopters!</b></h3>
                             <p className="mb-2 text-red-500 font-semibold">{error}</p>
 
                             {/* first name */}
@@ -75,7 +75,7 @@ export default function WaitListForm() {
                             </div>
 
                             {/* email */}
-                            <div className="mb-3">
+                            <div className="mb-3 mt-2">
                                 <div>
                                     <label htmlFor="email" className="font-bold text-md">
                                         Your Email
@@ -103,7 +103,7 @@ export default function WaitListForm() {
                                     <span className="loading loading-dots loading-xs"></span>
                                 </>
                             ) : (
-                                "Submit"
+                                "Join the waitlist"
                             )}
                         </button>
 
