@@ -17,16 +17,16 @@ export default function WaitListForm() {
         setError("")
         setLoading(true)
 
-        const fName = fNameRef.current.value
+        // const fName = fNameRef.current.value
         const email = emailRef.current.value
 
-        if (!fName || !email) {
+        if (!email) {
             setError("All fields are required")
             setLoading(false)
             return
         }
 
-        axios.post("/api/v1/waitlist", { fName, email }).then((response) => {
+        axios.post("/api/v1/waitlist", { email }).then((response) => {
             if (response.status == 201) {
                 SweetAlertSuccess(joined_waitlist)
                 setSuccess(true)
@@ -35,6 +35,8 @@ export default function WaitListForm() {
             }
         }).catch(e => {
             SweetAlertError(error_msg)
+        }).finally(() => {
+            setLoading(false);
         })
     }
 
@@ -56,7 +58,7 @@ export default function WaitListForm() {
                             <p className="mb-2 text-red-500 font-semibold">{error}</p>
 
                             {/* first name */}
-                            <div className="mb-3">
+                            {/* <div className="mb-3">
                                 <div>
                                     <label htmlFor="name" className="font-bold text-md">
                                         Your First Name
@@ -72,7 +74,7 @@ export default function WaitListForm() {
                                         placeholder="Enter Your First Name"
                                     />
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* email */}
                             <div className="mb-3 mt-2">

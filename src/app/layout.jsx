@@ -1,12 +1,12 @@
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json"
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: config.appName
 };
+
+const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
 export default function RootLayout({ children }) {
   return (
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css"
         ></link>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={application_font.className}>{children}</body>
     </html>
   );
 }

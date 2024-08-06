@@ -4,9 +4,9 @@ import { badRequest, internalServerError, resourceCreated } from "@/utils/prebui
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { fName, email } = data;
+        const { email } = data;
 
-        if (!fName || !email) {
+        if (!email) {
             return badRequest("All fields are required")
         }
 
@@ -22,7 +22,7 @@ export const POST = async (req) => {
         const insert = await prisma.waitList.create({
             data: {
                 email,
-                firstname: fName
+                firstname: ""
             }
         })
 

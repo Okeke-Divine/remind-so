@@ -22,12 +22,32 @@ export default function WaitListPage() {
                 </div>
 
                 <h1 className="text-center">
-                    To-dos and Schedules in one place.
+                    Your Ultimate Task and Time Management Companion
+                    {/* To-dos and Schedules in one place. */}
                 </h1>
 
+
+                <div className="mt-8">
+                    <h3 className="text-center">🚀 Calling All Indie Hackers and SaaS Founders!</h3>
+                </div>
+
+                <div className="mt-2">
+                    <div className="flex justify-center my-1">
+                        <p className="text-center max-w-[500px] font-semibold text-lg">Are you ready to supercharge your productivity and take control of your time? Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks.</p>
+                    </div>
+                    <div className="flex justify-center mt-2">
+  <ul className="list-disc list-inside text-center">
+    <li>Smart task prioritization</li>
+    <li>Seamless calendar integration</li>
+    <li>Customizable reminders</li>
+    <li>Team collaboration features</li>
+    <li>Intuitive time tracking</li>
+  </ul>
+</div>
+                </div>
+
                 {/* form */}
-                <div className="mt-5">
-                    <h3 className="text-center">Never miss a task again!</h3>
+                <div className="">
                     <WaitListForm />
                 </div>
             </div>
