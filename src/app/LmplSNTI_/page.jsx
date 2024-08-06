@@ -30,7 +30,7 @@ export default function Page() {
                             placeholder="Enter secret"
                             className="input input-bordered"
                         />
-                        <button type="submit" className="btn bg-yellow-500 text-white">Submit</button>
+                        <button type="submit" className="btn bg-yellow-700 text-white">Submit</button>
                     </form>
                 ) : (
                     <iframe
