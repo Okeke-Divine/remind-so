@@ -36,20 +36,29 @@ export default function WaitListPage() {
                         <p className="text-center max-w-[500px] font-semibold text-lg">Are you ready to supercharge your productivity and take control of your time? Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks.</p>
                     </div>
                     <div className="flex justify-center mt-2">
-  <ul className="list-disc list-inside text-center">
-    <li>Smart task prioritization</li>
-    <li>Seamless calendar integration</li>
-    <li>Customizable reminders</li>
-    <li>Team collaboration features</li>
-    <li>Intuitive time tracking</li>
-  </ul>
-</div>
+                        <ul className="list-disc list-inside text-center">
+                            <li>Smart task prioritization</li>
+                            <li>Seamless calendar integration</li>
+                            <li>Customizable reminders</li>
+                            <li>Team collaboration features</li>
+                            <li>Intuitive time tracking</li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* form */}
                 <div className="">
                     <WaitListForm />
                 </div>
+
+
+                {/* footer */}
+                <div className="footer">
+                    <div className="w-full flex justify-center">
+                        <span>© 2024 Remind.so. All rights reserved.</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
