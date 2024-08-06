@@ -1,6 +1,8 @@
 import prisma from "@/db";
 import ListButtons from "./Buttons";
 
+export const dynamic = 'force-dynamic';
+
 export default async function page() {
     const users = await prisma.waitList.findMany();
     const userEmails = users.map(user => user.email).join('\n'); // Join emails with new line
