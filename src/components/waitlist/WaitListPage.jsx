@@ -16,7 +16,7 @@ export default function WaitListPage() {
             <div className="relative z-10 px-5 md:px-10 py-16 lg:px-16 flex flex-col items-center text-white min-h-[100vh]">
                 {/* app name */}
                 <div className="mb-5">
-                    <h2 className="uppercase text-center tracking-widest">
+                    <h2 className="uppercase text-center tracking-widest text-yellow-300">
                         {config.appName}.so
                     </h2>
                 </div>
