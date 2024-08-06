@@ -65,7 +65,7 @@ export default function WaitListPage() {
                 <div className="mt-5">
                     <div>
                         <div>
-                            <h2 className="text-center">Ideal for SaaS Founders</h2>
+                            <h2 className="text-center">💼 Ideal for SaaS Founders</h2>
                         </div>
                         <div className="flex justify-center my-1">
                             <p className="text-center max-w-[500px] font-semibold text-lg">From product roadmaps to customer meetings, Remind.so keeps your entire team aligned and productive. Scale your operations without losing track of crucial tasks and milestones.</p>
