@@ -51,10 +51,31 @@ export default function WaitListPage() {
                     <WaitListForm />
                 </div>
 
+                {/* 🎯 Perfect for Indie Hackers */}
+                <div>
+                    <div>
+                        <h2 className="text-center">🎯 Perfect for Indie Hackers</h2>
+                    </div>
+                    <div className="flex justify-center my-1">
+                        <p className="text-center max-w-[500px] font-semibold text-lg">Streamline your workflow, manage multiple projects, and never miss a deadline. Remind.so helps you stay focused on what matters most - building and growing your products.</p>
+                    </div>
+                </div>
+
+                {/* 💼 Ideal for SaaS Founders */}
+                <div className="mt-5">
+                    <div>
+                        <div>
+                            <h2 className="text-center">Ideal for SaaS Founders</h2>
+                        </div>
+                        <div className="flex justify-center my-1">
+                            <p className="text-center max-w-[500px] font-semibold text-lg">From product roadmaps to customer meetings, Remind.so keeps your entire team aligned and productive. Scale your operations without losing track of crucial tasks and milestones.</p>
+                        </div>
+                    </div>
+                </div>
 
                 {/* footer */}
-                <div className="footer">
-                    <div className="w-full flex justify-center">
+                <div className="footer mt-10">
+                    <div className="w-full text-lg flex justify-center">
                         <span>© 2024 Remind.so. All rights reserved.</span>
                     </div>
                 </div>
