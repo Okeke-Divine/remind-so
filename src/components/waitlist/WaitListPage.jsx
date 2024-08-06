@@ -21,7 +21,7 @@ export default function WaitListPage() {
                     </h2>
                 </div>
 
-                <h1 className="text-center">
+                <h1 className="text-center text-5xl">
                     Your Ultimate Task and Time Management Companion
                     {/* To-dos and Schedules in one place. */}
                 </h1>
@@ -31,7 +31,7 @@ export default function WaitListPage() {
                     <h3 className="text-center">🚀 Calling All Indie Hackers and SaaS Founders!</h3>
                 </div>
 
-                <div className="mt-2">
+                <div className="mt-5">
                     <div className="flex justify-center my-1">
                         <p className="text-center max-w-[500px] font-semibold text-lg">Are you ready to supercharge your productivity and take control of your time? Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks.</p>
                     </div>
