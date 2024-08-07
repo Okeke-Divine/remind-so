@@ -115,7 +115,9 @@ export default function WaitListForm() {
                                         <span className="loading loading-dots loading-xs"></span>
                                     </>
                                 ) : (
-                                    "Join the waitlist"
+                                    <>
+                                    Join<span className="hidden md:block md:-ml-1">the waitlist</span>
+                                    </>
                                 )}
                             </button>
 
