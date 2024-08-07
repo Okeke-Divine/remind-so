@@ -3,7 +3,8 @@ import "./globals.css";
 import config from "@/data/config.json"
 
 export const metadata = {
-  title: config.appName
+  title: config.appName,
+  description: config.description
 };
 
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
