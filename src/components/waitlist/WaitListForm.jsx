@@ -96,17 +96,17 @@ export default function WaitListForm() {
                             </div>
                         </div>
 
-                        <div className="join w-full join-vertical md:join-horizontal">
+                        <div className="join w-full join-horizontal">
 
                             <input
                                 type="email"
                                 required
                                 ref={emailRef}
                                 className="w-full bg-transparent join-item input-bordered border-gray-100 border-[1px] input"
-                                placeholder="youname@email.com"
+                                placeholder="name@email.com"
                             />
 
-                            <button className="w-full md:w-fit join-item btn app-bg-white app-box-shadow-1 disabled:bg-[#e6e6e6] disabled:box-shadow-[inset_0_1px_.4px_#fff,inset_0_-1px_.4px_#0003,0_0_14px_#ffffff30,0_0_0_2px_#00000080] disabled:cursor-not-allowed disabled:opacity-70"
+                            <button className="w-fit join-item btn app-bg-white app-box-shadow-1 disabled:bg-[#e6e6e6] disabled:box-shadow-[inset_0_1px_.4px_#fff,inset_0_-1px_.4px_#0003,0_0_14px_#ffffff30,0_0_0_2px_#00000080] disabled:cursor-not-allowed disabled:opacity-70"
                                 type="submit"
                                 disabled={loading}
                             >
