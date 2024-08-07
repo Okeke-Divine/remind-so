@@ -3,7 +3,7 @@ import WaitListForm from "./WaitListForm";
 
 const features = [
     { name: "Smart task prioritization", icon: "fi fi-ts-progress-complete" },
-    { name: "Customizable reminders", icon: "reminder" },
+    { name: "Customizable reminders", icon: "fi fi-ts-pending" },
     { name: "Intuitive time tracking", icon: "fi fi-ts-alarm-exclamation" },
     {name: "Multi-Platform Syncing", icon: "fi fi-tr-cloud-back-up-alt"},
     {name: "Gamified Streaks and Points System", icon: "fi fi-ts-dice-d20"}
@@ -79,7 +79,7 @@ export default function WaitListPage() {
                 </div> */}
 
                 {/* features */}
-                <div className="mt-5 flex justify-between flex-wrap gap-2">
+                <div className="mt-5 flex justify-between flex-wrap gap-2 md:gap-5">
                     {features.map((feature) => (
                         <>
                             <div>
