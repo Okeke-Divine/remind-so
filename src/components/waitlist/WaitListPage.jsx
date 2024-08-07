@@ -12,14 +12,14 @@ const features = [
 
 export default function WaitListPage() {
     return (
-        <div className="relative w-full min-h-[100vh] bg-gray-800">
+        <div className="relative w-full min-h-[100vh] bg-[gradiet]">
             {/* Background Image */}
             <div
                 className="fixed inset-0 bg-cover bg-center"
             ></div>
 
             {/* Black Overlay with Glass Effect */}
-            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+            <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
 
             <div className="relative z-10 px-5 md:px-10 py-16 lg:px-16 flex flex-col items-center text-white min-h-[100vh]">
                 {/* app name */}
@@ -79,7 +79,11 @@ export default function WaitListPage() {
                 </div> */}
 
                 {/* features */}
-                <div className="mt-5 flex justify-between flex-wrap gap-2 md:gap-5">
+                <div className="my-5">
+                    <div className="text-center mb-3">
+                        <h3 className="uppercase">Unique Features to Boost Your Productivity</h3>
+                    </div>
+                <div className=" flex justify-center md:justify-between flex-wrap gap-x-2 gap-y-4 md:gap-x-5 md:gap-y-5">
                     {features.map((feature) => (
                         <>
                             <div>
@@ -93,10 +97,11 @@ export default function WaitListPage() {
                         </>
                     ))}
                 </div>
+                </div>
 
                 {/* footer */}
                 <div className="mt-10">
-                    <div className="w-full text-lg text-center">
+                    <div className="w-full text-sm text-center">
                         <span>© 2024 Remind.so. All rights reserved.</span>
                     </div>
                 </div>
