@@ -1,6 +1,15 @@
 import config from "@/data/config.json";
 import WaitListForm from "./WaitListForm";
 
+const features = [
+    { name: "Smart task prioritization", icon: "fi fi-ts-progress-complete" },
+    { name: "Customizable reminders", icon: "reminder" },
+    { name: "Intuitive time tracking", icon: "fi fi-ts-alarm-exclamation" },
+    {name: "Multi-Platform Syncing", icon: "fi fi-tr-cloud-back-up-alt"},
+    {name: "Gamified Streaks and Points System", icon: "fi fi-ts-dice-d20"}
+  ];
+  
+
 export default function WaitListPage() {
     return (
         <div className="relative w-full min-h-[100vh] bg-gray-800">
@@ -31,7 +40,7 @@ export default function WaitListPage() {
                          {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
                          </p>
                     </div>
-                    <div className="flex justify-center mt-2">
+                    {/* <div className="flex justify-center mt-2">
                         <ul className="list-disc list-inside text-center">
                             <li>Smart task prioritization</li>
                             <li>Seamless calendar integration</li>
@@ -39,7 +48,7 @@ export default function WaitListPage() {
                             <li>Team collaboration features</li>
                             <li>Intuitive time tracking</li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* form */}
@@ -68,6 +77,22 @@ export default function WaitListPage() {
                         </div>
                     </div>
                 </div> */}
+
+                {/* features */}
+                <div className="mt-5 flex justify-between flex-wrap gap-2">
+                    {features.map((feature) => (
+                        <>
+                            <div>
+                                <div className="flex justify-center">
+                                    <i className={feature.icon+" text-4xl"}></i>
+                                </div>
+                                <div className="text-center">
+                                    {feature.name}
+                                </div>
+                            </div>
+                        </>
+                    ))}
+                </div>
 
                 {/* footer */}
                 <div className="mt-10">
