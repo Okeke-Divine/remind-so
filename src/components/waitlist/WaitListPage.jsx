@@ -13,7 +13,7 @@ const features = [
 export default function WaitListPage() {
     return (
         <div className="relative w-full min-h-[100vh] bg-gradient-to-br from-gray-900 to-black">
-            {/* Background Image */}
+            {/* BackgroRequest for FHIR Health Exchange (FHEx) Demound Image */}
             <div
                 className="fixed inset-0 bg-cover bg-center"
             ></div>
@@ -37,7 +37,7 @@ export default function WaitListPage() {
 
                 <div className="mt-5">
                     <div className="flex justify-center">
-                        <p className="text-center max-w-[500px] font-semibold text-lg">Supercharge your productivity and take control of your time.
+                        <p className="text-center max-w-[550px] font-semibold text-lg">Supercharge your productivity and take control of your time.
                             {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
                         </p>
                     </div>

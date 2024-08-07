@@ -45,16 +45,16 @@ export default function WaitListForm() {
             <div className="flex justify-center">
                 {success ? (<>
                     <div>
-                        <div className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40">
+                        <div className="w-[90%] md:w-[40vw] my-10 bg-black p-5 md:p-10 rounded-[20px] app-text-white bg-opacity-40">
                             <h3 className="text-center">Thank You for Joining the Waitlist!</h3>
                         </div>
                     </div>
                 </>) : (<>
-                    <form className="w-[90%] md:w-[40vw] my-10 bg-black p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
+                    <form className="w-[90%] md:w-[40vw] my-10 bg-black p-5 md:p-10 rounded-[20px] app-text-white bg-opacity-40" onSubmit={addToWaitlist}>
                         <div>
 
                             <h3 className="text-gray-200 text-center">Special Offer for Early Adopters</h3>
-                            <h3 className="mt-2 mb-5 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">40% lifetime discount</b> for being one of <b className="text-yellow-300">the first 1,000 adopters!</b></h3>
+                            <h3 className="mt-2 mb-5 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">50% lifetime discount</b> for being one of <b className="text-yellow-300">the first 100 adopters!</b></h3>
                             <p className="mb-2 text-red-500 font-semibold">{error}</p>
 
                             {/* first name */}
