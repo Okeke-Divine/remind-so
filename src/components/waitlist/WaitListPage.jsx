@@ -3,11 +3,10 @@ import WaitListForm from "./WaitListForm";
 
 export default function WaitListPage() {
     return (
-        <div className="relative w-full min-h-[100vh]">
+        <div className="relative w-full min-h-[100vh] bg-gray-800">
             {/* Background Image */}
             <div
                 className="fixed inset-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/images/bg.png')" }}
             ></div>
 
             {/* Black Overlay with Glass Effect */}
@@ -23,17 +22,14 @@ export default function WaitListPage() {
 
                 <h1 className="text-center text-5xl">
                     Your Ultimate Task and Time Management Companion
-                    {/* To-dos and Schedules in one place. */}
                 </h1>
 
 
-                <div className="mt-8">
-                    <h3 className="text-center">🚀 Calling All Indie Hackers and SaaS Founders!</h3>
-                </div>
-
                 <div className="mt-5">
                     <div className="flex justify-center my-1">
-                        <p className="text-center max-w-[500px] font-semibold text-lg">Are you ready to supercharge your productivity and take control of your time? Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks.</p>
+                        <p className="text-center max-w-[500px] font-semibold text-lg">Supercharge your productivity and take control of your time.
+                         {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
+                         </p>
                     </div>
                     <div className="flex justify-center mt-2">
                         <ul className="list-disc list-inside text-center">

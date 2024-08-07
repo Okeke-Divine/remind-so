@@ -78,36 +78,48 @@ export default function WaitListForm() {
 
                             {/* email */}
                             <div className="mb-3 mt-2">
-                                <div>
+                                {/* <div>
                                     <label htmlFor="email" className="font-bold text-md">
                                         Your Email
                                     </label>
-                                </div>
-                                <div className="input border-[1px] border-gray-100 flex items-center gap-2 mt-1 app-bg-black text-white">
+                                </div> */}
+                                {/* <div className="input border-[1px] border-gray-100 flex items-center gap-2 mt-1 app-bg-black text-white">
                                     <i className="fi fi-tr-envelopes flaticon-offset"></i>
                                     <input
                                         type="email"
                                         required
                                         ref={emailRef}
                                         className="grow bg-transparent"
-                                        placeholder="Enter Your Email"
+                                        placeholder="Email"
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
-                        <button className="btn app-bg-white app-box-shadow-1 mt-5 w-full disabled:bg-[#e6e6e6] disabled:box-shadow-[inset_0_1px_.4px_#fff,inset_0_-1px_.4px_#0003,0_0_14px_#ffffff30,0_0_0_2px_#00000080] disabled:cursor-not-allowed disabled:opacity-70"
-                            type="submit"
-                            disabled={loading}
-                        >
-                            {loading ? (
-                                <>
-                                    <span className="loading loading-dots loading-xs"></span>
-                                </>
-                            ) : (
-                                "Join the waitlist"
-                            )}
-                        </button>
+                        <div className="join w-full join-vertical md:join-horizontal">
+
+                            <input
+                                type="email"
+                                required
+                                ref={emailRef}
+                                className="w-full bg-transparent join-item input-bordered border-gray-100 border-[1px] input"
+                                placeholder="youname@email.com"
+                            />
+
+                            <button className="w-full md:w-fit join-item btn app-bg-white app-box-shadow-1 disabled:bg-[#e6e6e6] disabled:box-shadow-[inset_0_1px_.4px_#fff,inset_0_-1px_.4px_#0003,0_0_14px_#ffffff30,0_0_0_2px_#00000080] disabled:cursor-not-allowed disabled:opacity-70"
+                                type="submit"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <>
+                                        <span className="loading loading-dots loading-xs"></span>
+                                    </>
+                                ) : (
+                                    "Join the waitlist"
+                                )}
+                            </button>
+
+                        </div>
 
                     </form></>)}
             </div>
