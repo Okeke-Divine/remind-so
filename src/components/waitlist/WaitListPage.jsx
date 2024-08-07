@@ -5,14 +5,14 @@ const features = [
     { name: "Smart task prioritization", icon: "fi fi-ts-progress-complete" },
     { name: "Customizable reminders", icon: "fi fi-ts-pending" },
     { name: "Intuitive time tracking", icon: "fi fi-ts-alarm-exclamation" },
-    {name: "Multi-Platform Syncing", icon: "fi fi-tr-cloud-back-up-alt"},
-    {name: "Gamified Streaks and Points System", icon: "fi fi-ts-dice-d20"}
-  ];
-  
+    { name: "Multi-Platform Syncing", icon: "fi fi-tr-cloud-back-up-alt" },
+    { name: "Gamified Streaks and Points System", icon: "fi fi-ts-dice-d20" }
+];
+
 
 export default function WaitListPage() {
     return (
-        <div className="relative w-full min-h-[100vh] bg-[gradiet]">
+        <div className="relative w-full min-h-[100vh] bg-gradient-to-br from-gray-900 to-black">
             {/* Background Image */}
             <div
                 className="fixed inset-0 bg-cover bg-center"
@@ -37,8 +37,8 @@ export default function WaitListPage() {
                 <div className="mt-5">
                     <div className="flex justify-center">
                         <p className="text-center max-w-[500px] font-semibold text-lg">Supercharge your productivity and take control of your time.
-                         {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
-                         </p>
+                            {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
+                        </p>
                     </div>
                     {/* <div className="flex justify-center mt-2">
                         <ul className="list-disc list-inside text-center">
@@ -84,17 +84,17 @@ export default function WaitListPage() {
                         <h3 className="uppercase">Unique Features to Boost Your Productivity</h3>
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-between items-center gap-y-4 md:gap-5">
-  {features.map((feature) => (
-    <div key={feature.name} className="flex flex-col items-center">
-      <div className="flex justify-center">
-        <i className={feature.icon + " text-4xl"}></i>
-      </div>
-      <div className="text-center">
-        {feature.name}
-      </div>
-    </div>
-  ))}
-</div>
+                        {features.map((feature) => (
+                            <div key={feature.name} className="flex flex-col items-center">
+                                <div className="flex justify-center">
+                                    <i className={feature.icon + " text-4xl"}></i>
+                                </div>
+                                <div className="text-center">
+                                    {feature.name}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
                 </div>
 
