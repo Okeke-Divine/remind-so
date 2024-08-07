@@ -35,7 +35,7 @@ export default function WaitListPage() {
 
 
                 <div className="mt-5">
-                    <div className="flex justify-center my-1">
+                    <div className="flex justify-center">
                         <p className="text-center max-w-[500px] font-semibold text-lg">Supercharge your productivity and take control of your time.
                          {/* Remind.so is here to revolutionize the way you manage your to-dos, schedules, and tasks. */}
                          </p>
@@ -83,20 +83,19 @@ export default function WaitListPage() {
                     <div className="text-center mb-3">
                         <h3 className="uppercase">Unique Features to Boost Your Productivity</h3>
                     </div>
-                <div className=" flex justify-center md:justify-between flex-wrap gap-x-2 gap-y-4 md:gap-x-5 md:gap-y-5">
-                    {features.map((feature) => (
-                        <>
-                            <div>
-                                <div className="flex justify-center">
-                                    <i className={feature.icon+" text-4xl"}></i>
-                                </div>
-                                <div className="text-center">
-                                    {feature.name}
-                                </div>
-                            </div>
-                        </>
-                    ))}
-                </div>
+                    <div className="flex flex-col md:flex-row md:justify-between items-center gap-y-4 md:gap-5">
+  {features.map((feature) => (
+    <div key={feature.name} className="flex flex-col items-center">
+      <div className="flex justify-center">
+        <i className={feature.icon + " text-4xl"}></i>
+      </div>
+      <div className="text-center">
+        {feature.name}
+      </div>
+    </div>
+  ))}
+</div>
+
                 </div>
 
                 {/* footer */}
