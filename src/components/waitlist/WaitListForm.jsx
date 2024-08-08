@@ -54,7 +54,8 @@ export default function WaitListForm() {
                         <div>
 
                             <h3 className="text-gray-200 text-center">Special Offer for Early Adopters</h3>
-                            <h3 className="mt-2 mb-5 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">50% lifetime discount</b> for being one of <b className="text-yellow-300">the first 100 adopters!</b></h3>
+                            {/* <h3 className="mt-2 mb-5 text-sm text-gray-300 text-center">Get a <b className="text-yellow-300">50% lifetime discount</b> for being one of <b className="text-yellow-300">the first 100 adopters!</b></h3> */}
+                            <h3>Be among the first 100 to try it for free when we launch!</h3>
                             <p className="mb-2 text-red-500 font-semibold">{error}</p>
 
                             {/* first name */}
