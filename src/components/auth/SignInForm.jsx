@@ -1,13 +1,21 @@
 "use client"
-
+import { useState } from "react"
 import Link from "next/link"
 
 export default function SignInForm() {
+
+    const [loading, setLoading] = useState(false);
+
+    async function signin(e){
+        e.preventDefault();
+        setLoading(true);
+    }
+
     return (
 
         <>
 
-            <form>
+            <form onClick={signin}>
                 <div>
                     <div className="mb-2">
                         <label htmlFor="email" className="mb-2 font-bold">Email address</label> <br />
@@ -25,7 +33,18 @@ export default function SignInForm() {
                     </div>
                 </div>
                 <div className="mt-5">
-                    <button className="bg-black text-white btn btn-md w-full">Sign in</button>
+                    <button className="bg-black text-white btn btn-md w-full hover:bg-gray-900"
+                        type="submit"
+                        disabled={loading}
+                    >
+                        {loading ? (
+                            <>
+                                <span className="loading loading-dots loading-xs"></span>
+                            </>
+                        ) : (
+                            "Signin"
+                        )}
+                    </button>
                 </div>
             </form>
 
