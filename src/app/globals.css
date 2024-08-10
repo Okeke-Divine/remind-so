@@ -27,6 +27,9 @@
   .app-bg-black {
     @apply bg-[#121212];
   }
+  .app-text-primary{
+    @apply text-yellow-600;
+  }
 }
 
 .app-box-shadow-1 {
