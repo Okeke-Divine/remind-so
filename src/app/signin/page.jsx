@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function SignIn() {
     return (
-        <div className="flex min-h-[100vh]">
-            <div className="w-1/2 p-5 md:p-10">
+        <div className="block md:flex min-h-[100vh]">
+            <div className="w-full md:w-1/2 p-5 md:p-10">
 
                 <div>
                     <img class="w-12 mb-2 rounded-full shadow-lg" src="/images/icon.png" alt="Portfoliia's logo"></img>
@@ -27,7 +27,7 @@ export default function SignIn() {
                 </div>
 
             </div>
-            <AuthPageAside w="w-1/2 p-10" />
+            <AuthPageAside w="w-full md:w-1/2 p-10" />
         </div>
     )
 }
