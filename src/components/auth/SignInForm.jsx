@@ -36,14 +36,14 @@ export default function SignInForm() {
                     <div className="mb-2">
                         <label htmlFor="email" className="mb-2 font-bold">Email address</label> <br />
                     </div>
-                    <input type="email" className="input input-bordered w-full" placeholder="johdoe@remind.so" ref={emailRef} />
+                    <input type="email" name="email" className="input input-bordered w-full" placeholder="johdoe@remind.so" ref={emailRef} />
                 </div>
                 {/* pswd */}
                 <div className="mt-3">
                     <div className="mb-2">
                         <label htmlFor="pswd" className="mb-2 font-bold">Password</label> <br />
                     </div>
-                    <input type="pswd" className="input input-bordered w-full" placeholder="secure-password"
+                    <input type="password" name="pswd" className="input input-bordered w-full" placeholder="secure-password"
                         ref={pswdRef} />
                     <div className="mt-2">
                         <Link className="app-text-primary font-bold" href="#">Forgot password?</Link>
