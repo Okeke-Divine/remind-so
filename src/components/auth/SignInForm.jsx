@@ -1,14 +1,29 @@
 "use client"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 
 export default function SignInForm() {
 
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-    async function signin(e){
+    const emailRef = useRef(null);
+    const pswdRef = useRef(null);
+
+    async function signin(e) {
         e.preventDefault();
         setLoading(true);
+        setError("");
+
+        const email = emailRef.current.value;
+        const pswd = pswdRef.current.value;
+
+        if (!email || !pswd || email == "" || pswd == "") {
+            setError("All fields are required.");
+            setLoading(false);
+            return;
+        }
+
     }
 
     return (
@@ -16,18 +31,20 @@ export default function SignInForm() {
         <>
 
             <form onClick={signin}>
+                <p className="my-2 font-semibold text-red-600">{error}</p>
                 <div>
                     <div className="mb-2">
                         <label htmlFor="email" className="mb-2 font-bold">Email address</label> <br />
                     </div>
-                    <input type="email" className="input input-bordered w-full" placeholder="johdoe@remind.so" />
+                    <input type="email" className="input input-bordered w-full" placeholder="johdoe@remind.so" ref={emailRef} />
                 </div>
                 {/* pswd */}
                 <div className="mt-3">
                     <div className="mb-2">
                         <label htmlFor="pswd" className="mb-2 font-bold">Password</label> <br />
                     </div>
-                    <input type="pswd" className="input input-bordered w-full" placeholder="secure-password" />
+                    <input type="pswd" className="input input-bordered w-full" placeholder="secure-password"
+                        ref={pswdRef} />
                     <div className="mt-2">
                         <Link className="app-text-primary font-bold" href="#">Forgot password?</Link>
                     </div>
