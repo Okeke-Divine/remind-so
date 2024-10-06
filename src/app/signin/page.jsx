@@ -12,10 +12,10 @@ export default function SignIn() {
                 </div>
 
                 <div className="text-4xl font-bold">
-                    Sign in to your account
+                    Sign in
                 </div>
                 <div className="mt-1 text-gray-500">
-                    You'll be up & running in seconds
+                    ... You'll be up & running in seconds
                 </div>
 
                 <div className="mt-5">

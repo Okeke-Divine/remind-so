@@ -2,23 +2,25 @@
 import { useState, useRef } from "react"
 import Link from "next/link"
 
-export default function SignInForm() {
+export default function SignUpForm() {
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
     const emailRef = useRef(null);
     const pswdRef = useRef(null);
+    const nameRef = useRef(null);
 
-    async function signin(e) {
+    async function signup(e) {
         e.preventDefault();
         setLoading(true);
         setError("");
 
         const email = emailRef.current.value;
         const pswd = pswdRef.current.value;
+        const name = nameRef.current.value;
 
-        if (!email || !pswd || email == "" || pswd == "") {
+        if (!email || !pswd || !name || name == "" || email == "" || pswd == "") {
             setError("All fields are required.");
             setLoading(false);
             return;
@@ -30,9 +32,17 @@ export default function SignInForm() {
 
         <>
 
-            <form onSubmit={signin}>
+            <form onSubmit={signup}>
                 <p className="my-2 font-semibold text-red-600">{error}</p>
+                {/* fullname */}
                 <div>
+                    <div className="mb-2">
+                        <label htmlFor="name" className="mb-2 font-bold">Full Name</label> <br />
+                    </div>
+                    <input type="text" name="name" className="input input-bordered w-full" placeholder="John Doe" ref={nameRef} />
+                </div>
+                {/* email */}
+                <div className="mt-3">
                     <div className="mb-2">
                         <label htmlFor="email" className="mb-2 font-bold">Email address</label> <br />
                     </div>
