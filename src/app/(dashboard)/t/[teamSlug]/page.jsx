@@ -62,22 +62,7 @@ const tasks = [
 ];
 
 export default function TeamPage() {
-  const [reminders, setReminders] = useState([]);
-  const [newReminder, setNewReminder] = useState("");
   const userInitial = "DI";
-
-  // Handle reminder creation
-  const addReminder = () => {
-    if (newReminder.trim() === "") return;
-    setReminders([...reminders, newReminder]);
-    setNewReminder("");
-  };
-
-  // Handle reminder deletion
-  const deleteReminder = (index) => {
-    const updatedReminders = reminders.filter((_, i) => i !== index);
-    setReminders(updatedReminders);
-  };
 
   return (
     <>
@@ -109,7 +94,12 @@ export default function TeamPage() {
           {/* Team section */}
           <div className="w-full p-5 min-h-[100vh] max-h-[100%] overflow-y-auto">
             <div className="flex justify-between items-center">
-              <div className="font-bold uppercase tracking-wide text-xl">{"{Team Name}"}</div>
+              <div className="font-bold uppercase tracking-wide text-xl">
+                <div>
+                  {"{Team Name}"}
+                </div>
+                <div className="text-sm uppercase tracking-widest text-gray-400">Reminders</div>
+              </div>
               <div className="flex gap-2 items-center">
                 <button className="btn btn-ghost">
                   <i className="fi fi-tr-rectangle-history-circle-plus text-xl"></i>
@@ -147,6 +137,37 @@ export default function TeamPage() {
                 </div>
               ))}
             </div>
+
+            <div className="divider"></div>
+
+            <div className="mb-3">
+              <div className="font-semibold mb-1">Frequency:</div>
+              <select name="" id="" className="select">
+                <option value="">Daily</option>
+                <option value="">Weekly</option>
+                <option value="">Monthly</option>
+              </select>
+            </div>
+
+            <div className="mb-3">
+              <div className="font-semibold mb-1">Priority:</div>
+              <select name="" id="" className="select">
+                <option value="">Low</option>
+                <option value="">Medium</option>
+                <option value="">High</option>
+              </select>
+            </div>
+
+            <div className="mb-3">
+              <div className="font-semibold mb-1">Notification Medium(s):</div>
+              <select name="notificationMedium" id="notificationMedium" className="select" multiple>
+                <option value="WEB">WEB</option>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Whatsapp">Whatsapp</option>
+              </select>
+            </div>
+
           </div>
         </div>
       </div>
