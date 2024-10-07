@@ -94,8 +94,8 @@ export default function TeamPage() {
           {/* Team section */}
           <div className="w-full p-5 min-h-[100vh] max-h-[100%] overflow-y-auto">
             <div className="flex justify-between items-center">
-              <div className="font-bold uppercase tracking-wide text-xl">
-                <div>
+              <div>
+                <div className="font-bold uppercase tracking-wide text-xl">
                   {"{Team Name}"}
                 </div>
                 <div className="text-sm uppercase tracking-widest text-gray-400">Reminders</div>
