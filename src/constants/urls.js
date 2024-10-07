@@ -1,0 +1,1 @@
+export const defaultAuthRedirUrl = "/t/me"

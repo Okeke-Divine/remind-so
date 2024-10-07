@@ -1,6 +1,9 @@
 "use client"
 import { useState, useRef } from "react"
 import Link from "next/link"
+import { signIn } from "next-auth/react";
+import { SweetAlertError,SweetAlertPending } from "@/utils/customSweetAlertFunction";
+import { defaultAuthRedirUrl } from "@/constants/urls";
 
 export default function SignInForm() {
 
@@ -23,6 +26,20 @@ export default function SignInForm() {
             setLoading(false);
             return;
         }
+
+        const login = await signIn("credentials", {
+            redirect: false,
+            email,
+            password: pswd,
+          });
+          if (login.error) {
+            SweetAlertError("Email or Password is incorrect");
+            setLoading(false);
+          } else {
+            SweetAlertPending({title:"Redirecting"})
+            document.location = defaultAuthRedirUrl;
+            setLoading(false);
+          }
 
     }
 
