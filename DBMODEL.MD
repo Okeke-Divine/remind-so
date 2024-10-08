@@ -41,21 +41,20 @@ model TeamMember {
 model Task {
   id           String     @id @default(cuid())
   title        String
-  description  String?
+  notes  String?
   priority     Priority    @default(MEDIUM)
   dueDate      DateTime?
   teamId       String
   team         Team       @relation(fields: [teamId], references: [id])
   subtasks     Subtask[]
-  reminders    Reminder[]
-  labels       Label[]
+  frequency Frequency @default(ONCE)
   createdAt    DateTime   @default(now())
 }
 
 model Subtask {
   id       String  @id @default(cuid())
   title    String
-  done     Boolean @default(false)
+  isComplete     Boolean @default(false)
   taskId   String
   task     Task    @relation(fields: [taskId], references: [id])
 }
@@ -63,8 +62,8 @@ model Subtask {
 model Label {
   id     String @id @default(cuid())
   name   String
-  color  String
-  tasks  Task[]
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
 }
 
 model Reminder {
@@ -106,7 +105,7 @@ enum Frequency {
   CUSTOM
 }
 
-enum NotificationType {
+enum NotificationMedium {
   WEB
   EMAIL
   PHONE

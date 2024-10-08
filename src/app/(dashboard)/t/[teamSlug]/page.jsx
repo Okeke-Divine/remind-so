@@ -1,32 +1,8 @@
-"use client"
-import Logo from '@/components/shared/Logo';
-import Link from 'next/link';
-import { useState } from 'react';
-
-const teamSlug = "me";
-
-const links = [
-  {
-    icon: "fi fi-tr-rectangle-list",
-    url: `/t/${teamSlug}`
-  },
-  {
-    icon: "fi fi-tr-customization-cogwheel",
-    url: `/settings`
-  },
-]
-
-const subtasks = [
-  {
-    title: "Sub task 1",
-  },
-  {
-    title: "Sub task 2",
-  },
-  {
-    title: "Sub task 3",
-  },
-]
+"use client";
+import Sidebar from '@/components/shared/Sidebar';
+import SectionTitle from '@/components/shared/SectionTitle';
+import Container from '@/components/shared/layout1/Container';
+import TaskDetails from '@/components/layout/TaskDetails';
 
 const tasks = [
   {
@@ -62,53 +38,50 @@ const tasks = [
 ];
 
 export default function TeamPage() {
-  const userInitial = "DI";
 
   return (
     <>
-      <div className="fixed top-0 left-0 h-full w-[80px] px-3 py-10 bg-gray-100 flex flex-col">
 
-        <Logo />
-        <div className="divider"></div>
+      <Sidebar />
 
-        <div className="flex flex-col gap-3">
-          {links.map((link, index) => (
-            <Link href={link.url} key={index} className="btn">
-              <i className={`${link.icon} text-2xl`}></i>
-            </Link>
-          ))}
-        </div>
-
-        <div className="h-full"></div>
-
-        {/* Avatar at the bottom */}
-        <div className="h-fit mt-auto">
-          <div className="flex justify-center items-center w-12 h-12 rounded-full bg-black text-white text-xl">
-            {userInitial}
-          </div>
-        </div>
-      </div>
-
-      <div className="ml-[80px]">
-        <div className="grid grid-cols-2 gap-3">
+      <Container>
+        <div className="block lg:grid grid-cols-2 gap-3">
           {/* Team section */}
-          <div className="w-full p-5 min-h-[100vh] max-h-[100%] overflow-y-auto">
+          <div className="w-full p-5 max-h-[100vh] overflow-y-scroll">
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-bold uppercase tracking-wide text-xl">
-                  {"{Team Name}"}
+                <div className="">
+
+                  <select className="select font-bold uppercase tracking-wide text-xl pl-0 pb-0">
+                    <option value="">{"{Team Name}"}</option>
+                  </select>
                 </div>
-                <div className="text-sm uppercase tracking-widest text-gray-400">Reminders</div>
+                <SectionTitle text="Reminders" />
               </div>
               <div className="flex gap-2 items-center">
                 <button className="btn btn-ghost">
-                  <i className="fi fi-tr-rectangle-history-circle-plus text-xl"></i>
+                  <i className="fi fi-tr-rectangle-history-circle-plus text-xl flaticon"></i>
                 </button>
               </div>
             </div>
             <div className="divider"></div>
 
             {/* Todo List for reminders */}
+            <div className='mb-2'>
+              <label className="input input-bordered flex items-center gap-2">
+                <i className="fi fi-tr-add flaticon"></i>
+                <input type="text" className="grow" placeholder="Add Reminder" />
+              </label>
+            </div>
+
+            <div className="divider my-1 py-1"></div>
+
+            <div className="join mb-2 join-horizontal">
+              <div className="btn bg-gray-300 join-item">All</div>
+              <div className="btn join-item">Completed</div>
+              <div className="btn join-item">Overdue</div>
+            </div>
+
             <div>
               {tasks.map((task, index) => (
                 <div key={index} className="flex items-center gap-2 mb-3 cursor-pointer duration-300 p-2 hover:bg-gray-100 hover:shadow-md">
@@ -117,60 +90,13 @@ export default function TeamPage() {
                 </div>
               ))}
             </div>
-
           </div>
 
           {/* Reminder Info Section */}
-          <div className="w-full bg-gray-100 min-h-[100vh] max-h-[100%] overflow-y-auto p-10">
-            <div className="text-sm uppercase tracking-widest text-gray-400">Reminder Info</div>
-            <div className="text-2xl tracking-wide font-bold">
-              Renew ShipFa.st domain
-            </div>
-            <div className="divider"></div>
-            <textarea className="textarea w-full h-[100px]" placeholder="Description..."></textarea>
-            <div className="divider"></div>
-            <div>
-              {subtasks.map((subtask, index) => (
-                <div key={index} className="flex items-center gap-2 mb-3 cursor-pointer duration-300 p-2 hover:bg-gray-100 hover:shadow-md">
-                  <input type="checkbox" className="checkbox" />
-                  {subtask.title}
-                </div>
-              ))}
-            </div>
-
-            <div className="divider"></div>
-
-            <div className="mb-3">
-              <div className="font-semibold mb-1">Frequency:</div>
-              <select name="" id="" className="select">
-                <option value="">Daily</option>
-                <option value="">Weekly</option>
-                <option value="">Monthly</option>
-              </select>
-            </div>
-
-            <div className="mb-3">
-              <div className="font-semibold mb-1">Priority:</div>
-              <select name="" id="" className="select">
-                <option value="">Low</option>
-                <option value="">Medium</option>
-                <option value="">High</option>
-              </select>
-            </div>
-
-            <div className="mb-3">
-              <div className="font-semibold mb-1">Notification Medium(s):</div>
-              <select name="notificationMedium" id="notificationMedium" className="select" multiple>
-                <option value="WEB">WEB</option>
-                <option value="Email">Email</option>
-                <option value="Phone">Phone</option>
-                <option value="Whatsapp">Whatsapp</option>
-              </select>
-            </div>
-
-          </div>
+          <TaskDetails task={null} />
         </div>
-      </div>
+
+      </Container>
     </>
   );
 }

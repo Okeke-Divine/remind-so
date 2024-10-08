@@ -30,6 +30,12 @@
   .app-text-primary{
     @apply text-yellow-500;
   }
+  .flaticon{
+    @apply relative top-[3px];
+  }
+  .active-sidebar-link{
+    @apply bg-yellow-500 text-white;
+  }
 }
 
 .app-box-shadow-1 {
